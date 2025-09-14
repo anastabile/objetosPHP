@@ -21,7 +21,7 @@ class ContaBancaria {
     public function sacar($valor) {
         if ($valor > 0 && $valor <= $this->saldo) {
             $this->saldo -= $valor;
-            return "Saque realizado com sucesso!";
+            return "Saque realizado";
         } else {
             return "Erro: saldo insuficiente.";
         }
@@ -32,7 +32,7 @@ class ContaBancaria {
         if ($valor > 0 && $valor <= $this->saldo) {
             $this->saldo -= $valor;
             $destino->depositar($valor);
-            return "Transferência realizada com sucesso!";
+            return "Transferência realizada";
         } else {
             return "Erro: saldo insuficiente para transferência.";
         }
