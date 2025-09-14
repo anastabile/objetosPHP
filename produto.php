@@ -22,9 +22,9 @@ class Produto {
     public function vender($quantidade) {
         if ($quantidade <= $this->estoque) {
             $this->estoque -= $quantidade;
-            return "Venda realizada com sucesso!";
+            return "Venda realizada";
         } else {
-            return "Erro: estoque insuficiente.";
+            return "Erro: quantidade insuficiente.";
         }
     }
 
